@@ -1,0 +1,125 @@
+/* Shared Style */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: lightgray;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Home Page */
+
+/* Style 1 */
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+    color: #111354;
+    font-weight: bold;
+}
+
+/* Style 2 */
+.home-page p {
+    line-height: 1.5;
+}
+
+/* Style 3 */
+.home-page img {
+    border-radius: 8px;
+    opacity: 0.8;
+    width: 60%;
+    height: auto;
+}
+
+/* Style 4 */
+.home-page {
+  background-color: #B0B2E8 !important;
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Style 5 */
+.home-page main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Soccer Page */
+
+/* Style 1 */
+.soccer-page h1,
+.soccer-page h2,
+.soccer-page h3 {
+    color: #BA4195;
+    font-weight: bold;
+}
+
+/* Style 2 */
+.soccer-page main {
+    width: 900px;
+    margin: 0 auto;
+}
+
+/* Style 3 */
+.soccer-page .spainworldcup-photo {
+    border: 6px solid #540753;
+    width: 50%;
+    height: auto;
+}
+
+/* Style 4 */
+.soccer-page {
+    background-color: #EDA6EC !important;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+/* Style 5 */
+.soccer-page .soccerball-photo {
+    width: 25%;
+    height: auto;
+}
+
+/* Resume Page */
+
+/* Style 1 */
+.resume-page h1,
+.resume-page h2,
+.resume-page h3 {
+    color: #144A16;
+    font-weight: bold;
+}
+
+/* Style 2 */
+.resume-page main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Style 3 */
+.resume-page p {
+    color: black;
+}
+
+/* Style 4 */
+body.resume-page {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style 5 */
+.resume-page {
+    background-color: #C2DEAB !important;
+    font-family:'Times New Roman', Times, serif;
+}
