@@ -128,7 +128,7 @@ body.resume-page {
 
 /* Media Query 1: Phone (320px and up) */
 @media screen and (min-width: 320px) {
-    /* Change 1: Stack navigation links vertically for phone screens */
+    /* Change 1: Vertical Nav */
     .home-page nav ul {
         flex-direction: column;
         align-items: center;
@@ -136,44 +136,46 @@ body.resume-page {
         padding: 0.75rem;
     }
 
-    /* Change 2: Widen images so they are easy to see on phones */
+    /* Change 2: Widen images */
     .home-page img {
         width: 95%;
     }
 
-    /* Change 3: Reduce main padding to give content more room */
-    .home-page main {
+    /* Change 3: Reduce main padding */
+    .home-page .page-wrapper {
         width: 95%;
         padding: 1rem;
     }
 
-    /* Change 4: Adjust heading size for phone viewports */
-    .home-page h1 {
-        font-size: 1.6rem;
+    /* Change 4: Shrink YouTube iframe */
+    .home-page iframe {
+        width: 100%;
+        height: 200px;
     }
 }
 
 /* Media Query 2: Tablet (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Change 1: Switch navigation links back to a horizontal row */
+    /* Change 1: Horizontal Nav */
     .home-page nav ul {
         flex-direction: row;
         gap: 2rem;
     }
 
-    /* Change 2: Scale image width down for wider tablet screens */
+    /* Change 2: Scale image width down */
     .home-page img {
         width: 70%;
     }
 
-    /* Change 3: Restore wider main container padding */
-    .home-page main {
+    /* Change 3: Restore wider padding */
+    .home-page .page-wrapper {
         width: 90%;
         padding: 2rem;
     }
 
-    /* Change 4: Increase heading size for tablet and larger screens */
-    .home-page h1 {
-        font-size: 2.2rem;
+    /* Change 4: Restore full YouTube video dimensions */
+    .home-page iframe {
+        width: 560px;
+        height: 315px;
     }
 }
