@@ -23,7 +23,7 @@ function initMap() {
     animation: google.maps.Animation.DROP
   });
 
-  /* Feature 3: InfoWindow */
+  /* Feature 3*/
   const infoWindow = new google.maps.InfoWindow({
     content: '<h3>Featured Location</h3><p>Welcome to my interactive Google Map!</p>'
   });
