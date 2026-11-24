@@ -61,7 +61,7 @@ img {
 }
 
 /* Style 2 */
-.soccer-page main {
+.soccer-page .page-wrapper {
     width: 900px;
     margin: 0 auto;
 }
@@ -97,7 +97,7 @@ img {
 }
 
 /* Style 2 */
-.resume-page main {
+.resume-page .page-wrapper {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
