@@ -1,13 +1,15 @@
+var map;
+
 function initMap() {
-  const mapContainer = document.getElementById('map');
-  if (!mapContainer) return;
+  var mapDiv = document.getElementById('map');
+  if (!mapDiv) {
+    return;
+  }
 
-  const centerCoords = { lat: 41.8818, lng: -87.6232 };
-
-  /* Feature 1 */
-  const map = new google.maps.Map(mapContainer, {
-    zoom: 13,
-    center: centerCoords,
+  /* Feature 1: Map Type Control */
+  map = new google.maps.Map(mapDiv, {
+    center: {lat: 41.8818, lng: -87.6232},
+    zoom: 8,
     mapTypeControl: true,
     mapTypeControlOptions: {
       style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
@@ -15,34 +17,32 @@ function initMap() {
     }
   });
 
-  /* Feature 2 */
-  const marker = new google.maps.Marker({
-    position: centerCoords,
+  /* Feature 2: Marker */
+  var marker = new google.maps.Marker({
+    position: {lat: -34.397, lng: 150.644},
     map: map,
-    title: 'Featured Location',
+    title: 'My Map Location',
     animation: google.maps.Animation.DROP
   });
 
-  /* Feature 3*/
-  const infoWindow = new google.maps.InfoWindow({
-    content: '<h3>Featured Location</h3><p>Welcome to my interactive Google Map!</p>'
+  /* Feature 3: InfoWindow */
+  var infoWindow = new google.maps.InfoWindow({
+    content: '<h3>My Map Location</h3><p>Welcome to my interactive Google Map!</p>'
   });
 
-  marker.addListener('click', () => {
+  marker.addListener('click', function() {
     infoWindow.open(map, marker);
   });
 }
 
-/*Question Button */
-function setupQuestionsButton() {
-  const questionsBtn = document.getElementById('questions-btn');
-  
+/* Questions Button */
+function initQuestions() {
+  var questionsBtn = document.getElementById('questions-btn');
   if (questionsBtn) {
-    questionsBtn.addEventListener('click', () => {
-      // \n creates the required two-line alert message
+    questionsBtn.addEventListener('click', function() {
       alert("If you have questions, contact me at: pling1@hawk.illinoistech.edu");
     });
   }
 }
 
-window.addEventListener('DOMContentLoaded', setupQuestionsButton);
+window.addEventListener('DOMContentLoaded', initQuestions);
