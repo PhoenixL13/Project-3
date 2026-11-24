@@ -123,3 +123,57 @@ body.resume-page {
     background-color: #C2DEAB !important;
     font-family:'Times New Roman', Times, serif;
 }
+
+/* Home Page Media Queries*/
+
+/* Media Query 1: Phone (320px and up) */
+@media screen and (min-width: 320px) {
+    /* Change 1: Stack navigation links vertically for phone screens */
+    .home-page nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    /* Change 2: Widen images so they are easy to see on phones */
+    .home-page img {
+        width: 95%;
+    }
+
+    /* Change 3: Reduce main padding to give content more room */
+    .home-page main {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    /* Change 4: Adjust heading size for phone viewports */
+    .home-page h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Media Query 2: Tablet (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Change 1: Switch navigation links back to a horizontal row */
+    .home-page nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* Change 2: Scale image width down for wider tablet screens */
+    .home-page img {
+        width: 70%;
+    }
+
+    /* Change 3: Restore wider main container padding */
+    .home-page main {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    /* Change 4: Increase heading size for tablet and larger screens */
+    .home-page h1 {
+        font-size: 2.2rem;
+    }
+}
