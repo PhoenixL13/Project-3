@@ -2,7 +2,7 @@ function init(){
   var questionsBtn = document.getElementById('questions-btn');
 	if (questionsBtn) {
 		questionsBtn.addEventListener('click', function() {
-			alert('If you have questions, contact me at:\nyourname@example.com');
+			alert('If you have questions, contact me at:pling1@hawk.illinoistech.edu');
 		});
 	}
 	
