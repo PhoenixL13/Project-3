@@ -1,11 +1,10 @@
-// 1. Google Maps Initialization (Runs automatically via &callback=initMap on map.html)
 function initMap() {
   const mapContainer = document.getElementById('map');
-  if (!mapContainer) return; // Prevents errors if called elsewhere
+  if (!mapContainer) return;
 
-  const centerCoords = { lat: 41.8781, lng: -87.6298 }; // Example: Chicago, IL
+  const centerCoords = { lat: 41.8818, lng: -87.6232 };
 
-  // Base Map + Feature 1: Custom Map Type Control & Styled Map
+  /* Feature 1 */
   const map = new google.maps.Map(mapContainer, {
     zoom: 13,
     center: centerCoords,
@@ -16,7 +15,7 @@ function initMap() {
     }
   });
 
-  // Feature 2: Custom Marker
+  /* Feature 2 */
   const marker = new google.maps.Marker({
     position: centerCoords,
     map: map,
@@ -24,7 +23,7 @@ function initMap() {
     animation: google.maps.Animation.DROP
   });
 
-  // Feature 3: InfoWindow (Opens on marker click)
+  /* Feature 3: InfoWindow */
   const infoWindow = new google.maps.InfoWindow({
     content: '<h3>Featured Location</h3><p>Welcome to my interactive Google Map!</p>'
   });
@@ -34,14 +33,14 @@ function initMap() {
   });
 }
 
-// 2. Questions Button Event Listener (Runs safely across all 4 HTML pages)
+/*Question Button */
 function setupQuestionsButton() {
   const questionsBtn = document.getElementById('questions-btn');
   
   if (questionsBtn) {
     questionsBtn.addEventListener('click', () => {
       // \n creates the required two-line alert message
-      alert('If you have questions, contact me at:\nyouremail@example.com');
+      alert("If you have questions, contact me at: pling1@hawk.illinoistech.edu");
     });
   }
 }
