@@ -33,6 +33,35 @@ function init(){
     infowindow.open(myMap, marker);
   });
 
+  /* Feature 1: Click marker to zoom in and center */
+	google.maps.event.addListener(marker, 'click', function() {
+		myMap.setZoom(20);
+		myMap.setCenter(marker.getPosition());
+	});
+
+	/* Feature 2: Highlighted circle radius around Perlstein Hall */
+	var campusCircle = new google.maps.Circle({
+		strokeColor: '#cc0000',
+		strokeOpacity: 0.8,
+		strokeWeight: 2,
+		fillColor: '#cc0000',
+		fillOpacity: 0.2,
+		map: myMap,
+		center: myLocation,
+		radius: 40
+	});
+
+  /* Feature 3: Click counter */
+	var clickCount = 0;
+	google.maps.event.addListener(myMap, 'click', function(event) {
+		clickCount++;
+		new google.maps.Marker({
+			position: event.latLng,
+			map: myMap,
+			label: String(clickCount)
+		});
+	});
+
 }
 
 window.addEventListener('load', init);
