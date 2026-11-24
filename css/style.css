@@ -13,6 +13,12 @@ img {
     margin: 0 auto;
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 /* Home Page */
 
 /* Style 1 */
@@ -43,7 +49,7 @@ img {
 }
 
 /* Style 5 */
-.home-page main {
+.home-page .page-wrapper {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -61,7 +67,7 @@ img {
 }
 
 /* Style 2 */
-.soccer-page main {
+.soccer-page .page-wrapper {
     width: 900px;
     margin: 0 auto;
 }
@@ -97,7 +103,7 @@ img {
 }
 
 /* Style 2 */
-.resume-page main {
+.resume-page .page-wrapper {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -122,4 +128,60 @@ body.resume-page {
 .resume-page {
     background-color: #C2DEAB !important;
     font-family:'Times New Roman', Times, serif;
+}
+
+/* Home Page Media Queries*/
+
+/* Media Query 1: Phone (320px and up) */
+@media screen and (min-width: 320px) {
+    /* Change 1: Vertical Nav */
+    .home-page nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    /* Change 2: Widen images */
+    .home-page img {
+        width: 95%;
+    }
+
+    /* Change 3: Reduce main padding */
+    .home-page .page-wrapper {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    /* Change 4: Shrink YouTube iframe */
+    .home-page iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Media Query 2: Tablet (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Change 1: Horizontal Nav */
+    .home-page nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* Change 2: Scale image width down */
+    .home-page img {
+        width: 70%;
+    }
+
+    /* Change 3: Restore wider padding */
+    .home-page .page-wrapper {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    /* Change 4: Restore full YouTube video dimensions */
+    .home-page iframe {
+        width: 560px;
+        height: 315px;
+    }
 }
